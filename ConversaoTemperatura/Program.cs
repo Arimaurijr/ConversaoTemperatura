@@ -6,9 +6,26 @@ internal class Program
     {
         double temperatura = 0.0;
 
-        Console.WriteLine("Digite a temperatura em graus CELSIUS");
-        temperatura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-        temperatura = 1.8 * temperatura + 32;
-        Console.WriteLine("A temperatura em graus fahrenheit é " + temperatura.ToString("F2", CultureInfo.InvariantCulture));
+        void Entrada()
+        {
+            Console.WriteLine("Digite a temperatura em graus CELSIUS");
+            temperatura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        }
+
+        void Conversao()
+        {
+            temperatura = 1.8 * temperatura + 32;
+        }
+
+        void Saida()
+        {
+            Console.WriteLine("A temperatura em graus fahrenheit é " + temperatura.ToString("F2", CultureInfo.InvariantCulture));
+        }
+
+        Entrada();
+        Conversao();
+        Saida();
+
+
     }
 }
